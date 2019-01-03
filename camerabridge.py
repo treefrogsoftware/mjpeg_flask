@@ -1,8 +1,12 @@
+import platform
 import io
-import picamera
 import threading
 import time
 from threading import Condition
+
+if "raspberrypi" in platform._syscmd_uname('-a'):
+    print (" * Running on a raspbberypi")
+    import picamera
 
 class StreamingOutput(object):
     def __init__(self):
