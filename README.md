@@ -41,3 +41,5 @@ To start the server on the command line type
 
 python3 app.py
 ```
+To see it get the address of your pi and type into your browser http://<address of pi>:5001
+    
