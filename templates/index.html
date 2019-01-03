@@ -1,0 +1,20 @@
+<html>
+<head>
+<title>picamera MJPEG streaming demo</title>
+<script type=text/javascript src="{{
+  url_for('static', filename='jquery.js') }}"></script>
+
+<script type=text/javascript>
+  $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+</script>
+
+<script type="text/javascript">
+</script>
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+</head>
+<body>
+{% include "layout.html" %}
+<center><h1>{{title}}</h1></center>
+<center><img src="{{ url_for('video_feed') }}"></center>
+</body>
+
