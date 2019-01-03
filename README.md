@@ -11,7 +11,7 @@ sudo apt-get install python3-pip
 sudo pip3 install flask
 sudo pip3 install picamera
 sudo pip3 install flask.jsontools
-
+```
 ## Non Pi solution
 
 To use the code on another architecture you will need to edit the camerabridge.py
@@ -33,9 +33,11 @@ threading method which starts the camera and starts writing to the output stream
         camerabridge.camera.start_recording(camerabridge.output, format='mjpeg')
         while camerabridge.run:
             time.sleep(20)
+```
 
 ## Running it
 To start the server on the command line type
 ```bash
 
 python3 app.py
+```
