@@ -6,7 +6,7 @@ if "raspberrypi" in platform._syscmd_uname('-a'):
     import io
     import threading
     import time
-    from MjpegCamera import MjpegCamera
+    from mjpegcamera.MjpegCamera import MjpegCamera
     from threading import Condition
 
     class StreamingOutput(object):
