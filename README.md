@@ -1,6 +1,6 @@
 # Mjpeg simple flask web server demo
 
-## Python Flask example using a raspberry pi camera to generate mjpeg over http
+## Python Flask example using a raspberry pi or ubuntu camera to generate mjpeg over http
 
 Use standard installations for pip3 to install the python packages
 
