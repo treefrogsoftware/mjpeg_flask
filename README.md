@@ -14,7 +14,7 @@ sudo apt install python3-opencv # on ubuntu and possibly the pi using a usb came
 ```
 ## Non Pi or Ubuntu solution
 
-To use the code on another architecture other than PI or Ubuntu you will need to create \<name\>MjpegCamera in the mjpegcamera package or it will just show you an image of a swimming pool from the default implementation.
+To use the code on another platform/os other than PI or Ubuntu you will need to create \<name\>MjpegCamera in the mjpegcamera package or it will just show you an image of a swimming pool from the default implementation.
 
 These modules inherit the abstract class MjpegCamera (Python 3 required) - once created you will also need to add
 the module to the package by adding into the mjpegcamera/\_\_init\_\_.py file
