@@ -10,11 +10,11 @@ sudo apt-get install python3
 sudo apt-get install python3-pip
 sudo pip3 install flask
 sudo pip3 install picamera # only on pi
+sudo apt install python3-opencv # on ubuntu and possibly the pi using a usb camera
 ```
-## Non Pi solution
+## Non Pi or Ubuntu solution
 
-To use the code on another architecture you will need to create \<name\>MjpegCamera in the mjpegcamera package or it will just show you an
-image of a swimming pool from the default implementation.
+To use the code on another architecture other than PI or Ubuntu you will need to create \<name\>MjpegCamera in the mjpegcamera package or it will just show you an image of a swimming pool from the default implementation.
 
 These modules inherit the abstract class MjpegCamera (Python 3 required) - once created you will also need to add
 the module to the package by adding into the mjpegcamera/__init__.py file
@@ -22,7 +22,8 @@ the module to the package by adding into the mjpegcamera/__init__.py file
 ```python
 __all__ = [
         'PiMjpegCamera',
-        'MjpegCamera'
+        'CV2MjpegCamera', # added and tested on ubuntu
+        'MjpegCamera' # abstract class in package used to expand for platforms
         ]
 ```
 The MjpegCamera is an abstract class which has three methods that will need to be implemented - start, stop and get_frame

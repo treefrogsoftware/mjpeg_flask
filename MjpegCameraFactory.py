@@ -16,7 +16,7 @@ class MjpegCameraFactory() :
     def getCameraForPlatform(self) :
         camera = self.type_dict["DefaultMjpegCamera"]
         for cameraName in self.type_dict:
-           if cameraName != "DefaultMjpegCamera": 
+           if cameraName != "DefaultMjpegCamera":
                camera = self.type_dict.get(cameraName)
                break
         return camera()
@@ -41,7 +41,6 @@ class DefaultMjpegCamera(MjpegCamera.MjpegCamera) :
 
     def get_frame(self):
         return DefaultMjpegCamera.demoFileFrame
-
 
 if __name__ == '__main__':
 
