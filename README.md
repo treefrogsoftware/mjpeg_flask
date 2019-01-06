@@ -4,7 +4,7 @@
 
 Use standard installations for pip3 to install the python packages
 
-## Pi and pip installs
+## Pi/Ubuntu and pip installs
 ```bash
 sudo apt-get install python3
 sudo apt-get install python3-pip
