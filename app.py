@@ -1,10 +1,7 @@
-from flask import Flask, render_template, Response, request, url_for, redirect
-from camerabridge import camerabridge
-from flask import jsonify
-from flask import g, flash
-import json
+from flask import Flask, render_template, Response
+from MjpegCameraFactory import MjpegCameraFactory
 
-camerabridge = camerabridge()
+camera = MjpegCameraFactory().getCameraForPlatform()
 
 def create_app():
     app = Flask(__name__)
@@ -31,7 +28,7 @@ def gen(camera):
 
 @app.route('/video_feed')
 def video_feed():
-    return Response(gen(camerabridge), mimetype='multipart/x-mixed-replace; boundary=frame')
+    return Response(gen(camera), mimetype='multipart/x-mixed-replace; boundary=frame')
 
 if __name__ == '__main__':
     app.run(threaded=True, debug=True, host='0.0.0.0', port=5001, use_reloader=False)
