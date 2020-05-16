@@ -1,4 +1,4 @@
-from mjpegcamera import *
+from cameratype import *
 
 class MjpegCameraFactory() :
 
@@ -39,6 +39,10 @@ class DefaultMjpegCamera(MjpegCamera.MjpegCamera) :
     def stop(self):
         return "stopped"
 
+    def stop_thread(self):
+        return "stopped"
+
+
     def get_frame(self):
         return DefaultMjpegCamera.demoFileFrame
 
@@ -47,5 +51,7 @@ if __name__ == '__main__':
     factory = MjpegCameraFactory()
     camera = factory.getCameraByName("TODO")
     camera = factory.getCameraForPlatform()
-    frame = camera.get_frame()
     print(factory.getCameraNameList())
+    frame = camera.get_frame()
+    camera.stop_thread()
+
